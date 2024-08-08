@@ -40,16 +40,25 @@ public class TestConfig implements CommandLineRunner{
         System.out.println("Estudantes salvos com sucesso!");
 
         Grupo grupo1 = new Grupo(null);
-        grupoRepository.saveAll(Arrays.asList(grupo1));
+        Grupo grupo2 = new Grupo(null);
+        grupoRepository.saveAll(Arrays.asList(grupo1, grupo2));
         System.out.println("Grupos salvos com sucesso!");
+
+        grupo1.getEstudantes().add(estudante1);
+        grupo2.getEstudantes().add(estudante1);
+        grupo2.getEstudantes().add(estudante2);
+        grupoRepository.saveAll(Arrays.asList(grupo1, grupo2));
 
         Professor professor1 = new Professor(null, "d", "e", "f");
         professorRepository.save(professor1);
         System.out.println("Professor salvo com sucesso!");
 
-    
-        Projeto projeto1 = new Projeto(null, "g", Instant.parse("2019-06-20T19:53:07Z"), Instant.parse("2019-06-20T19:53:07Z"));
+        Projeto projeto1 = new Projeto(null, "Ganhar dinhero", Instant.parse("2019-06-20T19:53:07Z"), Instant.parse("2019-06-20T19:53:07Z"), estudante1);
+        Projeto projeto2 = new Projeto(null, "Enfrentar criaturas", Instant.parse("2019-06-20T19:53:07Z"), Instant.parse("2019-06-20T19:53:07Z"), estudante2);
         projetoRepository.save(projeto1);
+        projetoRepository.save(projeto2);
         System.out.println("Projeto salvo com sucesso!");
+
+
     }
 }

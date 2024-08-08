@@ -35,4 +35,6 @@ public class Professor implements Serializable {
         this.email = email;
         this.senha = senha;
     }
+
+    
 }
