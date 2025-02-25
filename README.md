@@ -45,9 +45,6 @@ Durante o desenvolvimento, enfrentamos desafios como conflitos de merge no **Git
 
 O backend estará rodando em: `http://localhost:8080`
 
-## Link do Repositório
-[GitHub - Sistema de Gerenciamento de Candidatos Políticos](https://github.com/FelipeSeiji/projeto_faculdade)
-
 ---
 Este README fornece uma visão clara do projeto, destacando sua estrutura, tecnologias utilizadas e como executá-lo. Sinta-se à vontade para modificar e aprimorar conforme necessário!
 
